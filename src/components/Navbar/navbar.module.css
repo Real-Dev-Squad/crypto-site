@@ -1,0 +1,39 @@
+.navbar_desktop {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar_menu {
+  color: white;
+  background: var(--primary-color);
+  display: flex;
+  padding: 1.20rem;
+  margin: 0;
+  gap: 2.5rem;
+  align-items: center;
+  padding-left: 2.5rem;
+}
+
+.rds_logo {
+  width: 45px;
+  height: 45px;
+}
+.navlist_items {
+  display: flex;
+  align-items: center;
+  margin: 2px;
+}
+
+.navlink {
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+
+.navlink:hover {
+  color: #49a82e;
+}
