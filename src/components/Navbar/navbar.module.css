@@ -37,3 +37,7 @@
 .navlink:hover {
   color: #49a82e;
 }
+
+.profile_component {
+  margin-left: auto;
+}

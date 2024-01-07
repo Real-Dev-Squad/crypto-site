@@ -1,0 +1,23 @@
+.github_login_button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid white;
+  background: transparent;
+  padding: 0 10px;
+  height: fit-content;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.github_login_button_text {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.github_logo {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
