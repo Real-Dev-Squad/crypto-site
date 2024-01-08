@@ -16,7 +16,7 @@ const NavbarDesktop: React.FC<NavbarPresentationProps> = ({
   const profileComponent = isLoggedIn ? <></> : <GithubLogin />;
 
   const navItems = navLinks.map((link) => (
-    <li className={styles.navlist_items}>
+    <li key={link.name} className={styles.navlist_items}>
       <a className={styles.navlink} href={link.link}>
         {link.name}
       </a>
@@ -25,11 +25,11 @@ const NavbarDesktop: React.FC<NavbarPresentationProps> = ({
   return (
     <nav className={styles.navbar} data-testid="navbar_desktop">
       <ul className={styles.navbar_menu}>
-        <li data-testid="rds_logo">
+        <li key={'rds_logo'} data-testid="rds_logo">
           <img src={rdsLogo} className={styles.rds_logo} alt="RDS logo" />
         </li>
         {navItems}
-        <li className={styles.profile_component}>{profileComponent}</li>
+        <li key={'profile'} className={styles.profile_component}>{profileComponent}</li>
       </ul>
     </nav>
   );

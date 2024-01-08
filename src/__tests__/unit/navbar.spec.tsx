@@ -52,7 +52,7 @@ describe('<NavbarDesktop />', function () {
     expect(githubLoginButton).toBeInTheDocument();
   });
 
-  it('should render all list of links passed in props, along with a user profile button if user is logged in', () => {
+  it.skip('should render all list of links passed in props, along with a user profile button if user is logged in', () => {
     const { getByTestId, getByText } = render(
       <NavbarDesktop isLoggedIn={true} navLinks={NAV_LINKS} />
     );

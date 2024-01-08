@@ -41,3 +41,25 @@
 .profile_component {
   margin-left: auto;
 }
+
+/* NAVBAR MOBILE STYLES */
+
+.navbar_mobile_container {
+  color: white;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 1.25rem;
+}
+
+.navbar_mobile_menu {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1.25rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: 0;
+}
