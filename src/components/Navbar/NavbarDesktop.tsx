@@ -1,11 +1,11 @@
 import React from 'react';
-import { NavbarPresentationProps } from './navbar.types';
+import { navbarDesktopProps } from './navbar.types';
 import styles from './navbar.module.css';
 import rdsLogo from '../../assets/rds_logo.svg';
 import GithubLogin from '../GithubLogin';
 import UserProfile from '../UserProfile';
 
-const NavbarDesktop: React.FC<NavbarPresentationProps> = ({
+const NavbarDesktop: React.FC<navbarDesktopProps> = ({
   isLoggedIn,
   navLinks,
   username,
