@@ -52,9 +52,14 @@ describe('<NavbarDesktop />', function () {
     expect(githubLoginButton).toBeInTheDocument();
   });
 
-  it.skip('should render all list of links passed in props, along with a user profile button if user is logged in', () => {
+  it('should render all list of links passed in props, along with a user profile component if user is logged in', () => {
     const { getByTestId, getByText } = render(
-      <NavbarDesktop isLoggedIn={true} navLinks={NAV_LINKS} />
+      <NavbarDesktop
+        isLoggedIn={true}
+        navLinks={NAV_LINKS}
+        username="Vinayak"
+        displayPic="https://res.cloudinary.com/realdevsquad/image/upload/v1660416701/profile/2LEt2spMNDUCpkjmbsfa/pmtjfsf2pmk1cdfxrtvr.jpg"
+      />
     );
     const rdsLogoButton = getByTestId('rds_logo');
     const welcomeLink = getByText('Welcome');

@@ -1,19 +1,21 @@
 import React from 'react';
-import { NavLink } from './navbar.types';
+import { NavbarPresentationProps } from './navbar.types';
 import styles from './navbar.module.css';
 import rdsLogo from '../../assets/rds_logo.svg';
 import GithubLogin from '../GithubLogin';
-
-interface NavbarPresentationProps {
-  isLoggedIn: boolean;
-  navLinks: NavLink[];
-}
+import UserProfile from '../UserProfile';
 
 const NavbarDesktop: React.FC<NavbarPresentationProps> = ({
   isLoggedIn,
   navLinks,
+  username,
+  displayPic,
 }) => {
-  const profileComponent = isLoggedIn ? <></> : <GithubLogin />;
+  const profileComponent = isLoggedIn ? (
+    <UserProfile username={username} displayPic={displayPic} />
+  ) : (
+    <GithubLogin />
+  );
 
   const navItems = navLinks.map((link) => (
     <li key={link.name} className={styles.navlist_items}>
@@ -29,7 +31,9 @@ const NavbarDesktop: React.FC<NavbarPresentationProps> = ({
           <img src={rdsLogo} className={styles.rds_logo} alt="RDS logo" />
         </li>
         {navItems}
-        <li key={'profile'} className={styles.profile_component}>{profileComponent}</li>
+        <li key={'profile'} className={styles.profile_component}>
+          {profileComponent}
+        </li>
       </ul>
     </nav>
   );
