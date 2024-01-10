@@ -5,6 +5,29 @@ import { NAV_LINKS } from '../../components/Navbar/navbar.constant';
 import NavbarDesktop from '../../components/Navbar/NavbarDesktop';
 import NavbarMobile from '../../components/Navbar/NavbarMobile';
 import { useIsMobile } from '../../components/Navbar/navbar.hook';
+import Navbar from '../../components/Navbar';
+
+describe('<Navbar />', function () {
+  it('render NavbarDesktop if viewport width is greater than 1024px', () => {
+    Object.defineProperty(window, 'innerWidth', {
+      value: 1200,
+      writable: true,
+    });
+    const { getByTestId } = render(<Navbar />);
+    const navbarDesktop = getByTestId('navbar_desktop');
+    expect(navbarDesktop).toBeInTheDocument();
+  });
+
+  it('render NavbarMobile if viewport width is less than 1024px', () => {
+    Object.defineProperty(window, 'innerWidth', {
+      value: 800,
+      writable: true,
+    });
+    const { getByTestId } = render(<Navbar />);
+    const navbarMobile = getByTestId('navbar_mobile');
+    expect(navbarMobile).toBeInTheDocument();
+  });
+});
 
 describe('<NavbarDesktop />', function () {
   it('should render all list of links passed in props, along with a github login button if user is not logged in', () => {
