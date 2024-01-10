@@ -1,8 +1,10 @@
 import { render, fireEvent } from '@testing-library/react';
+import { renderHook } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { NAV_LINKS } from '../../components/Navbar/navbar.constant';
 import NavbarDesktop from '../../components/Navbar/NavbarDesktop';
 import NavbarMobile from '../../components/Navbar/NavbarMobile';
+import { useIsMobile } from '../../components/Navbar/navbar.hook';
 
 describe('<NavbarDesktop />', function () {
   it('should render all list of links passed in props, along with a github login button if user is not logged in', () => {
@@ -202,6 +204,27 @@ describe('<NavbarMobile />', function () {
     const hamburgerButton = getByTestId('hamburger_button');
     fireEvent.click(hamburgerButton);
 
-    expect(mockSetState).toHaveBeenCalledTimes(1)
+    expect(mockSetState).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('useIsMobile', () => {
+  it('returns true when window.innerWidth is less than 1024', () => {
+    Object.defineProperty(window, 'innerWidth', { value: 800, writable: true });
+
+    const { result } = renderHook(() => useIsMobile());
+
+    expect(result.current).toBe(true);
+  });
+
+  it('returns false when window.innerWidth is greater than or equal to 1024', () => {
+    Object.defineProperty(window, 'innerWidth', {
+      value: 1200,
+      writable: true,
+    });
+
+    const { result } = renderHook(() => useIsMobile());
+
+    expect(result.current).toBe(false);
   });
 });
