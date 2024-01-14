@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './navbar.module.css';
 import { navbarMobileProps } from './navbar.types';
-import hamburgerIcon from '../../assets/hamburgerIcon.svg';
+import hamburgerIcon from '../../assets/hamburger_icon.svg';
 import UserProfile from '../UserProfile';
 import GithubLogin from '../GithubLogin';
 
@@ -36,7 +36,7 @@ const NavbarMobile: React.FC<navbarMobileProps> = ({
           <img
             src={hamburgerIcon}
             className={styles.humberburger_icon}
-            alt=""
+            alt="hamburger icon"
           />
         </button>
         {profileComponent}
