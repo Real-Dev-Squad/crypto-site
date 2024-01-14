@@ -9,7 +9,7 @@
   color: white;
   background: var(--primary-color);
   display: flex;
-  padding: 1.20rem;
+  padding: 0.9rem;
   margin: 0;
   gap: 2.5rem;
   align-items: center;
@@ -73,6 +73,7 @@
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   width: 100%;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .nav_mobile_item {

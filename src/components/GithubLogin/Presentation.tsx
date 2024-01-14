@@ -5,14 +5,13 @@ import githubLogo from '../../assets/Github_Logo.svg';
 
 const GithubLoginPresentation: React.FC<githubLoginProps> = ({ authUrl }) => {
   return (
-    <a href={authUrl}>
-      <button
-        data-testid="github_login_button"
-        className={styles.github_login_button}
-      >
-        <p className={styles.github_login_button_text}>Sign in with github</p>
-        <img src={githubLogo} className={styles.github_logo} alt="" />
-      </button>
+    <a
+      href={authUrl}
+      data-testid="github_login_button"
+      className={styles.github_login_button}
+    >
+      <p className={styles.github_login_button_text}>Sign in with github</p>
+      <img src={githubLogo} className={styles.github_logo} alt="" />
     </a>
   );
 };
