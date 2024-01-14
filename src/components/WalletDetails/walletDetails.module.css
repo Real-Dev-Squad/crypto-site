@@ -1,13 +1,30 @@
+.wallet_details_container {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  gap: 30px;
+  margin: auto;
+  flex-shrink: 0;
+}
 
+.wallet_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
 .wallet_item {
   border-radius: 10px;
   border: 1px solid #F7F7F7;
   background: #F7F7F7;
-  padding: 17px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+  padding: 10px;
+  min-height: 120px;
 }
 
 .currency_image {
@@ -17,14 +34,14 @@
 
 .currency_name {
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: normal;
 }
 
 .currency_value {
   color: var(--text-color);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   line-height: normal;
 }
@@ -34,18 +51,20 @@
 .user_welcome_container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
+  width: 100%;
 }
 
 .user_welcome_container .user_image {
-  width: 100px;
-  height: 100px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
 }
 
 .user_welcome_container .welcome_text {
   color: var(--text-color);
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 600;
   line-height: normal;
 }

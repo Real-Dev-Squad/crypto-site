@@ -8,7 +8,10 @@ describe('useUserWallet', () => {
   const { result } = renderHook(() => useUserWallet());
 
   expect(result.current).toStrictEqual({
-    userWalletDetails: { dinero: 60, neelam: 80 },
+    userWalletDetails: [
+      { name: 'Dinero', value: 80 },
+      { name: 'Neelam', value: 60 },
+    ],
   });
 });
 
