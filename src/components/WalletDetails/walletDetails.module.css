@@ -1,0 +1,30 @@
+
+
+.wallet_item {
+  border-radius: 10px;
+  border: 1px solid #F7F7F7;
+  background: #F7F7F7;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.currency_image {
+  width: 50px;
+  height: 50px;
+}
+
+.currency_name {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.currency_value {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+}
