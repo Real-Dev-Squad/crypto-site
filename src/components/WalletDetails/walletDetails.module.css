@@ -1,7 +1,8 @@
 .wallet_details_container {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   gap: 30px;
   margin: auto;
   flex-shrink: 0;
@@ -67,4 +68,15 @@
   font-size: 24px;
   font-weight: 600;
   line-height: normal;
+}
+
+@media screen and (max-width: 500px) {
+  .wallet_items {
+    flex-direction: column;
+  }
+
+  .wallet_item {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
