@@ -1,0 +1,17 @@
+.user_profile {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user_profile .username {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.user_profile .user_image {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
