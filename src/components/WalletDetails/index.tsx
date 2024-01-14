@@ -6,7 +6,7 @@ import WalletItem from './WalletItem';
 
 const WalletDetails: React.FC = () => {
   const wallet = useUserWallet();
-  const walletItems = wallet.userWalletDetails.map((item, index) => (
+  const walletItems = wallet?.userWalletDetails?.map((item, index) => (
     <WalletItem key={item.name} currency={item.name} value={item.value} index={index} />
   ));
 

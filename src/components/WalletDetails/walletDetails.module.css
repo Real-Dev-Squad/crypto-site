@@ -17,8 +17,8 @@
 
 .wallet_item {
   border-radius: 10px;
-  border: 1px solid #F7F7F7;
-  background: #F7F7F7;
+  border: 1px solid var(--card-background);
+  background: var(--card-background);
   display: flex;
   flex-direction: column;
   align-items: center;
