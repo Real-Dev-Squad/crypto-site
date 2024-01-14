@@ -12,7 +12,7 @@ const UserProfile: React.FC<userProfileProps> = ({ username, displayPic }) => {
         data-testid="user_image"
         src={displayPic}
         className={styles.user_image}
-        alt=""
+        alt="user profile pic"
       />
     </div>
   );
