@@ -1,7 +1,7 @@
 import React from 'react';
 import { githubLoginProps } from './githubLogin.types';
 import styles from './githubLogin.module.css';
-import githubLogo from '../../assets/github_logo.svg';
+import githubLogo from '../../assets/Github_Logo.svg';
 
 const GithubLoginPresentation: React.FC<githubLoginProps> = ({ authUrl }) => (
   <a
